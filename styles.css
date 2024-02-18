@@ -1,0 +1,428 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* botão ida */
+.botaofixo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 100px;
+  height: 100px;
+  background-color: #00008B;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  z-index: 999;
+  font-size: 14px; 
+}
+
+/* telas menores */
+@media screen and (max-width: 768px) {
+  .botaofixo {
+    width: 80px;
+    height: 80px;
+    font-size: 12px;
+  }
+}
+
+/* telas mais menores */
+@media screen and (max-width: 480px) {
+  .botaofixo {
+    width: 60px;
+    height: 60px;
+    font-size: 10px;
+  }
+}
+
+.botaodevolta {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 100px;
+  height: 100px;
+  background-color: #00008B;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  z-index: 999;
+  font-size: 14px; 
+}
+
+/* telas menores */
+@media screen and (max-width: 768px) {
+  .botaodevolta {
+    width: 80px;
+    height: 80px;
+    font-size: 12px;
+  }
+}
+
+/* telas menores */
+@media screen and (max-width: 480px) {
+  .botaodevolta {
+    width: 60px;
+    height: 60px;
+    font-size: 10px;
+  }
+}
+
+/*geral*/
+body {
+  font-family: 'Niramit', sans-serif;
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/*barra de info*/
+header {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+header a {
+  color: #00008B;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+header a:hover {
+  color: #555;
+}
+
+/*imagem de fundo*/
+#inicial {
+  background: url(img/hotel.jpg) no-repeat center;
+  background-size: cover;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+#inicial h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+#inicial p {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/*reservas*/
+#reservas {
+  background: #00008B;
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+}
+
+#reservas input[type="date"] {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+#reservas input[type="submit"] {
+  background: #fff;
+  color: #00008B;
+  border: none;
+  border-radius: 8px;
+  padding: 15px 30px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#reservas input[type="submit"]:hover {
+  background-color: #00008B;
+  color: #fff;
+}
+
+
+/* acomodações tela grande */
+.acomodacoes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-content: center;
+}
+
+.acomodacao {
+  width: 100%;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.acomodacao img {
+  max-width: 500px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* telas menores */
+@media screen and (max-width: 768px) {
+  .acomodacoes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* telas mais pequenas */
+@media screen and (max-width: 480px) {
+  .acomodacoes {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .acomodacao p {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* imagem hotel tela grande */
+#ohotel img {
+  width: 800px;
+  height: auto;
+}
+
+/* imagem hotel telas menores */
+@media screen and (max-width: 768px) {
+  #ohotel img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* imagem hotel telas ainda menor */
+@media screen and (max-width: 480px) {
+  #ohotel img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/*títulos de acomodacoes gastronomia contato*/
+#ohotel h3,
+#acomodacoes h3,
+#gastronomia h3,
+#contato h3 {
+  background-color: #fff;
+  color: #00008B;
+  padding: 10px 0;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* títulos gastronomia*/
+#gastronomia h4{
+  color: #333;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+/* parágrafos telas grandes */
+#ohotel p,
+#gastronomia p,
+#contato p {
+  color: #333;
+  padding-left: 125px;
+  padding-right: 125px;
+  text-align: center;
+}
+
+/* parágrafos telas menores */
+@media screen and (max-width: 768px) {
+  #ohotel p,
+  #gastronomia p,
+  #contato p {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* parágrafos telas mais menores */
+@media screen and (max-width: 480px) {
+  #ohotel p,
+  #gastronomia p,
+  #contato p {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+/* imagem ao centro em ohotel gastronomia  contato */
+#ohotel,
+#gastronomia,
+#contato,
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* imagem gastronomia telas grandes */
+#gastronomia img {
+  width: 800px;
+  height: auto;
+}
+
+/* imagem gastronomia telas menores */
+@media screen and (max-width: 768px) {
+  #gastronomia img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* imagem gastronomia telas maais menores */
+@media screen and (max-width: 480px) {
+  #gastronomia img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/*footer*/
+footer {
+  background-color: #00008B;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+address {
+  text-align: center;
+}
+
+/* APARTIR DAQUI DF.HMTL */
+body {
+  font-family: 'Niramit', sans-serif;
+  background-color: #f4f4f4;
+}
+
+
+/*cabeçalho*/
+#titulodf {
+  background-color: #00008B;
+  color: white;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#p1 {
+padding-left: 30px;
+padding-right: 30px;
+}
+
+#p2 {
+  padding-left: 30px;
+  padding-right: 30px;
+  }
+
+/*lista*/
+ol {
+  list-style-type: none;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+li {
+  margin-bottom: 20px;
+}
+
+li strong {
+  color: #00008B;
+}
+
+  /* APARTIR DAQUI DF.HMTL */
+  body {
+    font-family: 'Niramit', sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  
+  /*cabeçalho*/
+  #titulodf {
+    background-color: #00008B;
+    color: white;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  #p1 {
+  padding-left: 30px;
+  padding-right: 30px;
+  }
+  
+  #p2 {
+    padding-left: 30px;
+    padding-right: 30px;
+    }
+  
+  /*lista*/
+  ol {
+    list-style-type: none;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  
+  li {
+    margin-bottom: 20px;
+  }
+  
+  li strong {
+    color: #00008B;
+  }
